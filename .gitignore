@@ -16,6 +16,7 @@ lerna-debug.log*
 # Dependency directories
 node_modules/
 package-lock.json
+!client/package-lock.json
 
 # Build output
 .next
