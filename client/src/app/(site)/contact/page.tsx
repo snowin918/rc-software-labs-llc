@@ -1,30 +1,25 @@
-import ContactForm from "@/components/Contact/Form";
-import ContactInfo from "@/components/Contact/ContactInfo";
-import Location from "@/components/Contact/OfficeLocation";
-import React from "react";
-import HeroSub from "@/components/SharedComponent/HeroSub";
-import { Metadata } from "next";
+import type { Metadata } from "next";
+import { displayName } from "@/data/company";
+import ContactSection from "@/components/ContactSection";
+
+const title = "Contact Us" + " | " + displayName;
+const description = "Discuss your hiring needs or software project with RC Software Labs. Share your requirements, technology stack, and timeline to start a conversation.";
 export const metadata: Metadata = {
-    title: "Contact | Venus",
+  title,
+  description,
+  openGraph: { title, description },
+  twitter: { title, description },
 };
 
-const page = () => {
-  const breadcrumbLinks = [
-    { href: "/", text: "Home" },
-    { href: "/contact", text: "Contact" },
-  ];
+export default function Page() {
   return (
     <>
-      <HeroSub
-        title="Contact Us"
-        description="Discover a wealth of insightful materials meticulously crafted to provide you with a comprehensive understanding of the latest trends."
-        breadcrumbLinks={breadcrumbLinks}
-      />
-      <ContactInfo />
-      <ContactForm />
-      <Location />
+      <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+        <p className="text-label mb-4">{displayName}</p>
+        <h1 className="text-display">Contact Us</h1>
+        <p className="text-body mt-6 max-w-3xl">{description}</p>
+      </div>
+      <ContactSection />
     </>
   );
-};
-
-export default page;
+}

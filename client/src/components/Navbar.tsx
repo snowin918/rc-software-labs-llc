@@ -1,6 +1,7 @@
 'use client';
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import CompanyLogo from "@/components/CompanyLogo";
 import { cn } from "@/lib/utils";
@@ -15,11 +16,13 @@ const navItems: NavItem[] = [
   { label: "Approach", href: "#philosophy" },
   { label: "Who We Are", href: "#who-we-are" },
   { label: "Expertise", href: "#expertise" },
-  { label: "7 Habits", href: "#seven-habits" },
+  { label: "Our Values", href: "#seven-habits" },
   { label: "Contact", href: "#contact" },
 ];
 
 const Navbar = () => {
+  const pathname = usePathname();
+  const sectionHref = (hash: string) => pathname === "/" ? hash : `/${hash}`;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState(navItems[0]?.href ?? "#home");
 
@@ -108,7 +111,7 @@ const Navbar = () => {
     <header className="sticky top-0 z-40 border-b border-brand-border bg-brand-base/80 backdrop-blur-xl">
       <div className="mx-auto flex h-20 w-full max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link
-          href="#home"
+          href={sectionHref("#home")}
           className="flex items-center text-brand-text"
           onClick={closeMenu}
         >
@@ -121,7 +124,7 @@ const Navbar = () => {
             return (
               <Link
                 key={item.href}
-                href={item.href}
+                href={sectionHref(item.href)}
                 aria-current={isActive ? "page" : undefined}
                 className={cn(
                   "nav-link text-sm font-medium",
@@ -139,7 +142,7 @@ const Navbar = () => {
 
         <div className="flex items-center gap-3">
           <Link
-            href="#contact"
+            href={sectionHref("#contact")}
             className="hidden button-primary rounded-full bg-brand-primary px-5 py-2 text-sm font-semibold text-brand-base transition hover:bg-brand-glow md:inline-flex"
           >
             Request talent
@@ -184,7 +187,7 @@ const Navbar = () => {
           {navItems.map((item) => (
             <Link
               key={item.href}
-              href={item.href}
+              href={sectionHref(item.href)}
               aria-current={activeSection === item.href ? "page" : undefined}
               className={cn(
                 "rounded-xl border border-brand-border bg-brand-ink/80 px-4 py-3 text-brand-soft transition hover:border-white/15",
@@ -199,7 +202,7 @@ const Navbar = () => {
             </Link>
           ))}
           <Link
-            href="#contact"
+            href={sectionHref("#contact")}
             className="mt-2 inline-flex items-center justify-center button-primary rounded-full bg-brand-primary px-5 py-3 text-base font-semibold text-brand-base transition hover:bg-brand-glow"
             onClick={closeMenu}
           >

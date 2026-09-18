@@ -6,12 +6,12 @@ const primaryOfferings = [
   {
     title: "IT Staffing",
     body:
-      "Staff augmentation and dedicated engineers who join your team with ownership and senior-level execution.",
+      "Strengthen your team with experienced engineers matched to your technology stack, priorities, and ways of working.",
   },
   {
     title: "Software Consulting",
     body:
-      "Architecture, delivery leadership, and hands-on partnership from discovery through launch and support.",
+      "Technical architecture, delivery guidance, and hands-on development from initial planning through launch and ongoing support.",
   },
 ];
 
@@ -34,7 +34,7 @@ const capabilities = [
   {
     number: "04",
     title: "AI & Machine Learning",
-    body: "LLM integration, automation, NLP pipelines, and applied model work.",
+    body: "AI integration, workflow automation, natural language processing, and applied machine learning.",
   },
   {
     number: "05",
@@ -57,8 +57,9 @@ const ExpertiseSection = () => {
           title="IT staffing, backed by engineering depth"
           lead={
             <p>
-              Hire the people you need — or engage us to lead delivery. Either way,
-              you get talent vetted for real production work.
+              Expand your internal capabilities or bring in technical guidance for
+              a specific initiative. Our staffing and consulting services support
+              the people and systems behind your business.
             </p>
           }
         />
@@ -69,7 +70,7 @@ const ExpertiseSection = () => {
               key={offering.title}
               className="surface-card rounded-2xl border border-brand-border bg-brand-surface/60 p-8 transition hover:border-brand-primary/40"
             >
-              <p className="mb-3 text-label">Primary offering</p>
+              <p className="mb-3 text-label">How we help</p>
               <h3 className="text-heading mb-3 text-xl md:text-2xl">{offering.title}</h3>
               <p className="text-body-sm text-brand-soft/90">{offering.body}</p>
             </div>
@@ -79,10 +80,10 @@ const ExpertiseSection = () => {
         <div className="space-y-6">
           <div className="space-y-2">
             <h3 className="font-display text-xl text-brand-text md:text-2xl">
-              Roles we fill
+              Engineering capabilities
             </h3>
             <p className="max-w-3xl text-body-sm">
-              Capability areas where our engineers ship and where we staff strongest.
+              Specialist expertise for your applications, infrastructure, and data-driven initiatives.
             </p>
           </div>
 

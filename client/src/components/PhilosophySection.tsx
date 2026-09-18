@@ -4,35 +4,35 @@ import ContentRow from "@/components/ContentRow";
 
 const principles = [
   {
-    title: "Skill over geography",
-    body: "We place proven engineers — wherever they sit — against clear role requirements.",
+    title: "Expertise without borders",
+    body: "We connect you with engineers whose experience matches your technical requirements and business priorities.",
   },
   {
-    title: "Fit before fill",
-    body: "We screen for stack, seniority, and communication. Speed never replaces match quality.",
+    title: "Thoughtful candidate selection",
+    body: "We assess technical skills, experience, and communication to find the right fit for your team.",
   },
   {
-    title: "Own the outcome",
-    body: "Engineers join as accountable contributors, not resume placeholders.",
+    title: "Accountability from day one",
+    body: "Our engineers contribute with clear responsibilities, shared goals, and a commitment to dependable delivery.",
   },
   {
-    title: "Straight talk",
-    body: "If a candidate or timeline isn’t right, we say so early — before it costs you a cycle.",
+    title: "Transparent communication",
+    body: "We communicate openly about candidate suitability, availability, and timelines so you can make informed decisions.",
   },
 ];
 
 const howWeWork = [
   {
-    title: "Listen to the role",
-    body: "Scope, stack, seniority, and team culture first — then we shortlist.",
+    title: "Understand your requirements",
+    body: "We clarify your scope, technology stack, experience requirements, and team environment before selecting candidates.",
   },
   {
-    title: "Vet with rigor",
-    body: "Technical depth, delivery history, and English-ready collaboration.",
+    title: "Evaluate relevant experience",
+    body: "We review technical depth, project experience, and the communication skills needed for effective collaboration.",
   },
   {
-    title: "Stay close after start",
-    body: "We support onboarding and stay available if the engagement needs adjustment.",
+    title: "Support the engagement",
+    body: "We support onboarding and remain available as your team, priorities, and engagement needs evolve.",
   },
 ];
 
@@ -42,11 +42,12 @@ const PhilosophySection = () => {
       <div className="space-y-14">
         <SectionHeader
           eyebrow="Approach"
-          title="How we staff"
+          title="The right expertise starts with understanding your goals"
           lead={
             <p>
-              Clear requirements. Strong candidates. Honest feedback. We treat
-              staffing as a delivery partnership, not a volume transaction.
+              Every engagement begins with your business needs. We combine
+              careful candidate evaluation with clear communication and ongoing
+              support to help your team move forward.
             </p>
           }
         />

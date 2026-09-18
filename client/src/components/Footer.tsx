@@ -3,11 +3,11 @@ import CompanyLogo from "@/components/CompanyLogo";
 import { address, displayName, email } from "@/data/company";
 
 const footerLinks = [
-  { label: "Approach", href: "#philosophy" },
-  { label: "Who We Are", href: "#who-we-are" },
-  { label: "Expertise", href: "#expertise" },
-  { label: "7 Habits", href: "#seven-habits" },
-  { label: "Contact", href: "#contact" },
+  { label: "Approach", href: "/#philosophy" },
+  { label: "Who We Are", href: "/#who-we-are" },
+  { label: "Expertise", href: "/#expertise" },
+  { label: "Our Values", href: "/#seven-habits" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 const Footer = () => {
@@ -16,12 +16,12 @@ const Footer = () => {
       <div className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
           <div className="max-w-md space-y-4">
-            <Link href="#home" className="inline-flex" aria-label="RC Software Labs LLC home">
+            <Link href="/#home" className="inline-flex" aria-label="RC Software Labs LLC home">
               <CompanyLogo />
             </Link>
             <p className="text-body-sm">
-              IT staffing and software consulting for U.S. companies — senior
-              engineers, clear communication, reliable delivery.
+              Senior engineering talent and software consulting for U.S. businesses.
+              Technical expertise, clear communication, and lasting partnerships.
             </p>
           </div>
 

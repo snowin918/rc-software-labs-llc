@@ -1,9 +1,11 @@
+import type { Metadata } from "next";
+import { displayName } from "@/data/company";
+const title = "Documentation" + " | " + displayName;
+const description = "Technical reference for the RC Software Labs website.";
+export const metadata: Metadata = { title, description, openGraph: { title, description }, twitter: { title, description }, robots: { index: false, follow: false } };
 
 import { Documentation } from "@/components/Documentation/Documentation";
-import { Metadata } from "next";
-export const metadata: Metadata = {
-    title: "Documentation | Venus",
-};
+
 
 export default function Page() {
     return (

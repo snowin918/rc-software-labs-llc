@@ -1,10 +1,12 @@
+import type { Metadata } from "next";
+import { displayName } from "@/data/company";
+const title = "Project Portfolio" + " | " + displayName;
+const description = "Explore web, mobile, and cloud project examples across a range of industries.";
+export const metadata: Metadata = { title, description, openGraph: { title, description }, twitter: { title, description } };
 import React from "react";
 import Portfolio from "@/components/portfolio/PortfolioList";
 import HeroSub from "@/components/SharedComponent/HeroSub";
-import { Metadata } from "next";
-export const metadata: Metadata = {
-    title: "Portfolio | Venus",
-};
+
 
 const PortfolioList = () => {
     const breadcrumbLinks = [
@@ -15,7 +17,7 @@ const PortfolioList = () => {
         <>
             <HeroSub
                 title="Portfolio"
-                description="Dive into a curated collection of my finest work, showcasing expertise across various industries."
+                description={description}
                 breadcrumbLinks={breadcrumbLinks}
             />
             <Portfolio />

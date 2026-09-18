@@ -4,32 +4,32 @@ import ContentRow from "@/components/ContentRow";
 
 const habits = [
   {
-    title: "Be Proactive",
-    body: "We flag risks early and keep placements moving without waiting to be chased.",
+    title: "Take ownership",
+    body: "We identify risks early, communicate next steps, and take responsibility for our commitments.",
   },
   {
-    title: "Begin with the End in Mind",
-    body: "Every shortlist maps to your role goals, stack, and success criteria.",
+    title: "Define success together",
+    body: "We align candidate selection and delivery decisions with your goals and success criteria.",
   },
   {
-    title: "Put First Things First",
-    body: "Critical hires and blockers get priority — not busywork.",
+    title: "Focus on what matters",
+    body: "We prioritize the hiring needs and technical challenges that have the greatest impact on your team.",
   },
   {
-    title: "Think Win-Win",
-    body: "Engagements are built so clients and engineers both succeed long-term.",
+    title: "Build lasting partnerships",
+    body: "We establish clear expectations that support productive relationships between clients and engineers.",
   },
   {
-    title: "Seek First to Understand",
-    body: "We learn your team and constraints before recommending anyone.",
+    title: "Listen before recommending",
+    body: "We understand your team, requirements, and constraints before proposing a solution.",
   },
   {
-    title: "Synergize",
-    body: "We match complementary strengths — not just overlapping resumes.",
+    title: "Collaborate with purpose",
+    body: "We bring together complementary skills and encourage open, constructive collaboration.",
   },
   {
-    title: "Sharpen the Saw",
-    body: "Our network stays sharp through continuous learning and technical review.",
+    title: "Keep improving",
+    body: "We value continuous learning, thoughtful feedback, and the ongoing development of technical skills.",
   },
 ];
 
@@ -38,12 +38,13 @@ const SevenHabitsSection = () => {
     <SectionWrapper id="seven-habits">
       <div className="space-y-12">
         <SectionHeader
-          eyebrow="7 Habits"
-          title="How our teams show up"
+          eyebrow="Our values"
+          title="The principles behind every partnership"
           lead={
             <p>
-              We align placements and delivery around Covey’s 7 Habits — practical
-              ownership, clarity, and follow-through across time zones.
+              Strong working relationships depend on more than technical ability.
+              These principles guide how we communicate, collaborate, and
+              support our clients and engineers.
             </p>
           }
         />

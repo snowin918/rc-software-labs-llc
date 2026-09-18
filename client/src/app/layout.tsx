@@ -5,7 +5,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import DynamicBackground from "@/components/Layout/DynamicBackground";
-import { cityState, displayName, legalName } from "@/data/company";
+import { displayName, siteTitle, siteDescription } from "@/data/company";
 
 const plusJakarta = localFont({
   src: [
@@ -57,8 +57,10 @@ const sora = localFont({
 });
 
 export const metadata: Metadata = {
-  title: displayName,
-  description: `${legalName} is a ${cityState}–based IT staffing firm placing senior engineers with U.S. partners — plus software consulting for architecture and delivery.`,
+  title: siteTitle,
+  description: siteDescription,
+  openGraph: { title: siteTitle, description: siteDescription, siteName: displayName, type: "website", locale: "en_US" },
+  twitter: { card: "summary", title: siteTitle, description: siteDescription },
 };
 
 export default function RootLayout({

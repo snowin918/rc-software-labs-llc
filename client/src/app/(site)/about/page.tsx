@@ -1,32 +1,29 @@
+import type { Metadata } from "next";
+import { displayName } from "@/data/company";
+import WhoWeAreSection from "@/components/WhoWeAreSection";
+import PhilosophySection from "@/components/PhilosophySection";
+import SevenHabitsSection from "@/components/SevenHabitsSection";
 
-import React from "react";
-import HeroSub from "@/components/SharedComponent/HeroSub";
-import { Metadata } from "next";
-import WhoWeAreSection from "@/components/Absurd/WhoWeAreSection";
-import PhilosophySection from "@/components/Absurd/PhilosophySection";
-import VisionValuesSection from "@/components/Absurd/VisionValuesSection";
-import { displayName, legalName } from "@/data/company";
+const title = "About Us" + " | " + displayName;
+const description = "Meet RC Software Labs, a California-based IT staffing and software consulting firm helping U.S. businesses build capable engineering teams.";
 export const metadata: Metadata = {
-    title: `About | ${displayName}`,
+  title,
+  description,
+  openGraph: { title, description },
+  twitter: { title, description },
 };
 
-const page = () => {
-  const breadcrumbLinks = [
-    { href: "/", text: "Home" },
-    { href: "/about", text: "About" },
-  ];
+export default function Page() {
   return (
     <>
-      <HeroSub
-        title={`About ${legalName}`}
-        description="Global engineers aligning precision with empathy to build intelligent systems and equitable opportunity across borders."
-        breadcrumbLinks={breadcrumbLinks}
-      />
+      <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+        <p className="text-label mb-4">{displayName}</p>
+        <h1 className="text-display">About Us</h1>
+        <p className="text-body mt-6 max-w-3xl">{description}</p>
+      </div>
       <WhoWeAreSection />
       <PhilosophySection />
-      <VisionValuesSection />
+      <SevenHabitsSection />
     </>
   );
-};
-
-export default page;
+}

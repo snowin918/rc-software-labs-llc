@@ -1,30 +1,27 @@
-
-import React from "react";
-import HeroSub from "@/components/SharedComponent/HeroSub";
-import { Metadata } from "next";
-import ExpertiseSection from "@/components/Absurd/ExpertiseSection";
-import PartnersSection from "@/components/Absurd/PartnersSection";
+import type { Metadata } from "next";
 import { displayName } from "@/data/company";
+import ExpertiseSection from "@/components/ExpertiseSection";
+import ContactSection from "@/components/ContactSection";
+
+const title = "IT Staffing & Software Consulting" + " | " + displayName;
+const description = "Explore senior engineering staffing and software consulting for web applications, mobile development, cloud infrastructure, and AI initiatives.";
 export const metadata: Metadata = {
-    title: `Services | ${displayName}`,
+  title,
+  description,
+  openGraph: { title, description },
+  twitter: { title, description },
 };
 
-const page = () => {
-  const breadcrumbLinks = [
-    { href: "/", text: "Home" },
-    { href: "/services", text: "Services" },
-  ];
+export default function Page() {
   return (
     <>
-      <HeroSub
-        title="Services"
-        description="End-to-end engineering for web, mobile, cloud, and AI systems purpose-built for U.S. partners."
-        breadcrumbLinks={breadcrumbLinks}
-      />
+      <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+        <p className="text-label mb-4">{displayName}</p>
+        <h1 className="text-display">IT Staffing &amp; Software Consulting</h1>
+        <p className="text-body mt-6 max-w-3xl">{description}</p>
+      </div>
       <ExpertiseSection />
-      <PartnersSection />
+      <ContactSection />
     </>
   );
-};
-
-export default page;
+}

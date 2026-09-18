@@ -1,3 +1,8 @@
+import type { Metadata } from "next";
+import { displayName } from "@/data/company";
+const title = "Engineering Insights" + " | " + displayName;
+const description = "Articles and perspectives on software development, engineering practices, and technology.";
+export const metadata: Metadata = { title, description, openGraph: { title, description }, twitter: { title, description } };
 import React from 'react'
 import BlogList from '@/components/Blog/BlogList'
 import HeroSub from '@/components/SharedComponent/HeroSub'
@@ -11,7 +16,7 @@ const BlogPage = () => {
     <>
       <HeroSub
         title='Blog'
-        description='Discover a wealth of insightful materials meticulously crafted to provide you with a comprehensive understanding of the latest trends.'
+        description={description}
         breadcrumbLinks={breadcrumbLinks}
       />
       <BlogList />

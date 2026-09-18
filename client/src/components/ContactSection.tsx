@@ -9,11 +9,12 @@ const ContactSection = () => {
         <div className="space-y-8">
           <SectionHeader
             eyebrow="Contact"
-            title="Need engineers? Let’s talk."
+            title="Build your next team with us"
             lead={
               <p>
-                Share the role, stack, and timeline. We’ll respond within one
-                business day with next steps — for hiring or consulting.
+                Tell us about your hiring goals or software initiative. Share your
+                requirements, technology stack, and timeline so we can discuss
+                the right support for your team.
               </p>
             }
           />
@@ -36,10 +37,10 @@ const ContactSection = () => {
         </div>
 
         <div className="flex flex-col justify-center gap-5 surface-card rounded-2xl border border-brand-border bg-brand-surface/70 p-8 text-left md:p-10">
-          <p className="text-label">Quick contact</p>
+          <p className="text-label">Start a conversation</p>
           <p className="text-body text-brand-soft">
-            Email us the role brief. We handle staffing requests, consulting
-            inquiries, and engineer introductions.
+            Send us a role description or project overview. We welcome staffing
+            inquiries, consulting opportunities, and introductions from engineers.
           </p>
           <a
             href={`mailto:${email}?subject=Talent%20request`}
@@ -47,7 +48,7 @@ const ContactSection = () => {
           >
             Request talent
           </a>
-          <p className="text-body-sm">Typical reply within 1 business day.</p>
+          <p className="text-body-sm">Include your requirements and preferred start date.</p>
         </div>
       </div>
     </SectionWrapper>

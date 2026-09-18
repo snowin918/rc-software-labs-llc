@@ -5,11 +5,13 @@ import WhoWeAreSection from "@/components/WhoWeAreSection";
 import ExpertiseSection from "@/components/ExpertiseSection";
 import SevenHabitsSection from "@/components/SevenHabitsSection";
 import ContactSection from "@/components/ContactSection";
-import { displayName, legalName } from "@/data/company";
+import { displayName, siteTitle, siteDescription } from "@/data/company";
 
 export const metadata: Metadata = {
-  title: displayName,
-  description: `${legalName} is an IT staffing firm for U.S. companies — placing senior web, mobile, cloud, and AI engineers, with consulting when you need delivery leadership.`,
+  title: siteTitle,
+  description: siteDescription,
+  openGraph: { title: siteTitle, description: siteDescription, siteName: displayName, type: "website", locale: "en_US" },
+  twitter: { card: "summary", title: siteTitle, description: siteDescription },
 };
 
 export default function Home() {
