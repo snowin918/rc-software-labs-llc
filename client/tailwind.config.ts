@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { extendedConfig } from "./src/utils/extendedConfig";
 
 const config: Config = {
   content: [
@@ -8,7 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      ...extendedConfig,
       colors: {
+        ...extendedConfig.colors,
         brand: {
           base: "#071713",
           ink: "#0c211b",
@@ -28,13 +31,16 @@ const config: Config = {
         display: ["var(--font-display)", "system-ui", "sans-serif"],
       },
       maxWidth: {
+        ...extendedConfig.maxWidth,
         content: "70rem",
       },
       boxShadow: {
+        ...extendedConfig.boxShadow,
         "blue-glow": "0 16px 40px rgba(128, 229, 187, 0.2)",
         "warm-glow": "0 16px 40px rgba(232, 188, 128, 0.15)",
       },
       backgroundImage: {
+        ...extendedConfig.backgroundImage,
         "hero-grid":
           "radial-gradient(circle at 20% 20%, rgba(128,229,187,0.15), transparent 40%), radial-gradient(circle at 80% 0%, rgba(232,188,128,0.2), transparent 45%)",
       },

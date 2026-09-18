@@ -197,5 +197,5 @@ export const insights = [
 export const contactInfo = {
   company: "RC Software Labs LLC",
   location: "14610 Plummer St, Panorama City, CA 91402",
-  email: "contact@snsoftwarelabsllc.com"
+  email: "contact@rcsoftwarelabs.com"
 };

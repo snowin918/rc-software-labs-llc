@@ -35,3 +35,6 @@ coverage
 # Hosting
 .vercel
 
+
+.vercel
+.env*
