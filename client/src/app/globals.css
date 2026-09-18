@@ -30,6 +30,7 @@
   --color-brand-border: rgba(176, 244, 215, 0.13);
 }
 
+@layer base {
 *,
 *::before,
 *::after {
@@ -289,3 +290,4 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--color-primary);outl
 @keyframes ambient-drift{to{transform:translate3d(-8%,10%,0)}}@keyframes hero-enter{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}@keyframes orbit-turn{to{transform:rotate(360deg)}}@keyframes label-float{50%{transform:translateY(-8px)}}
 @media(max-width:1023px){.hero-section{padding:3.5rem 0 4rem}.talent-visual{max-width:340px}}
 @media(prefers-reduced-motion:reduce){.ambient-orb,.talent-orbit,.orbit-label,.hero-copy{animation:none}.button-primary:hover,.surface-card:hover{transform:none}}
+}
